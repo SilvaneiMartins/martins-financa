@@ -23,7 +23,7 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 rusqlite = { version = "0.32", features = ["bundled", "backup"] }
 tokio = { version = "1", features = ["rt-multi-thread", "net", "sync", "macros"] }
-axum = "0.7"
+axum = "0.8"
 tower-http = { version = "0.6", features = ["cors"] }
 reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
 local-ip-address = "0.6"
