@@ -1,0 +1,29 @@
+name: Reportar um problema
+description: Algo não está funcionando como deveria
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o problema e o que você esperava que acontecesse.
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir
+      placeholder: "1. Abra Lançamentos\n2. Clique em...\n3. ..."
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operacional
+      options: [Windows 10/11, macOS Apple Silicon, macOS Intel, Linux]
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: Versão do app
+      description: Veja em Configurações → Sobre
+  - type: markdown
+    attributes:
+      value: "⚠️ Nunca anexe seu banco de dados ou extratos reais — eles contêm dados financeiros pessoais."

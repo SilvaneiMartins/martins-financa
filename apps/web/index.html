@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Martins Finança — controle financeiro gratuito para Windows, Mac e Linux</title>
+    <meta name="description" content="Aplicativo gratuito e open source para controlar receitas, despesas, cartões, financiamentos, orçamento familiar, viagens e metas. Seus dados ficam no seu computador." />
+    <meta property="og:title" content="Martins Finança — grátis e open source" />
+    <meta property="og:description" content="Controle financeiro pessoal e familiar feito para brasileiros. Sem anúncios, sem assinatura." />
+    <script>
+      try {
+        var t = localStorage.getItem("mf:web-theme") || "light";
+        if (t === "dark" || (t === "system" && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark");
+      } catch (e) {}
+    </script>
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

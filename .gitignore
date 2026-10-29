@@ -1,0 +1,29 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Tauri / Rust
+src-tauri/target/
+src-tauri/gen/
+
+# dados locais nunca vão para o repositório
+*.db
+*.db-wal
+*.db-shm
+*.ofx
+
+# monorepo
+*.tsbuildinfo
+apps/*/dist/
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/gen/
+
+# artefatos locais (instaladores são gerados pelo GitHub Actions)
+release/
+exports/
+.claude/
+._*
