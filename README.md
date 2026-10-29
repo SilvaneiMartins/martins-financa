@@ -60,7 +60,7 @@ Nós, brasileiros, precisamos de um jeito **gratuito** de cuidar do próprio din
 ```
 apps/
   desktop/         app Tauri (React + Rust)
-  web/             landing page (React + TypeScript + Tailwind), publicada no GitHub Pages
+  web/             landing page (React + TypeScript + Tailwind), publicada no Netlify
 ```
 
 ```
@@ -97,7 +97,7 @@ cd apps/desktop/src-tauri && cargo test
 2. `git tag v0.1.0 && git push origin v0.1.0`
 3. O workflow **Release** compila Windows (.exe/.msi), macOS Apple Silicon e Intel (.dmg) e Linux (.AppImage/.deb/.rpm) e publica a Release com os instaladores — o botão de download do site passa a apontar para eles automaticamente.
 
-Outros workflows: **CI** (tipos, testes, build, `cargo fmt`, `clippy`, `cargo test`) em todo push/PR, e **Site** (publica `apps/web` no GitHub Pages — ative em *Settings → Pages → Source: GitHub Actions*). O Dependabot atualiza dependências mensalmente.
+Outros workflows: **CI** (tipos, testes, build, `cargo fmt`, `clippy`, `cargo test`) em todo push/PR. O site (`apps/web`) é publicado pelo Netlify a cada push na `main` (configuração em `netlify.toml`). O Dependabot atualiza dependências mensalmente.
 
 > O repositório (`SilvaneiMartins/martins-financa`) é configurado em `apps/web/src/lib/config.ts` (`REPO`) e em `apps/desktop/src/lib/constants.ts` (`REPO_URL`).
 

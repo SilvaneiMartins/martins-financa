@@ -1,0 +1,17 @@
+# Publica somente o site (apps/web) no Netlify.
+# O app desktop não é compilado aqui — os instaladores saem do workflow Release.
+
+[build]
+  base = "."
+  command = "pnpm --filter @martins/web build"
+  publish = "apps/web/dist"
+  # só refaz o deploy quando algo do site (ou das dependências) mudou
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- apps/web package.json pnpm-lock.yaml pnpm-workspace.yaml netlify.toml"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
