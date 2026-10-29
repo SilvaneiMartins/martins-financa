@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo.svg" width="72" alt="Martins Finança" />
+  <img src="apps/web/public/logo.svg" width="72" alt="Martins Finança" />
 </p>
 
 <h1 align="center">Martins Finança</h1>
